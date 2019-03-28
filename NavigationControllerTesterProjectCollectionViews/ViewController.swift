@@ -2,8 +2,6 @@
 //  ViewController.swift
 //  NavigationControllerTesterProjectCollectionViews
 //
-//  Created by Thomas M. Jumper on 3/27/19.
-//  Copyright © 2019 Tile Technology LLC. All rights reserved.
 //
 
 import UIKit
@@ -48,7 +46,6 @@ class ViewController: UIViewController {
             print("imageView, nextButton are nil")
             return
         }
-        
         self.view.backgroundColor = UIColor.white
         
         self.view.addSubview(imageView)
@@ -73,13 +70,6 @@ class ViewController: UIViewController {
         if let constraints = constraints{
             NSLayoutConstraint.activate(constraints)
         }
-        
-//        view.addSubview(nextButton)
-//        NSLayoutConstraint.activate([
-//            nextButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-//            nextButton.centerYAnchor.constraint(equalTo: self.view.centerYAnchor, constant: 0),
-//            nextButton.heightAnchor.constraint(equalToConstant: 200),
-//            nextButton.widthAnchor.constraint(equalToConstant: 200)])
     }
 
     @objc func backButtonTapped(){
@@ -93,23 +83,18 @@ class ViewController: UIViewController {
         vc.view.backgroundColor = UIColor.blue
         vc.title = "Next View Controller"
         self.navigationController?.pushViewController(vc, animated: true)
+        print("Views currently existing: \(navigationController?.viewControllers.count)")
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
     }
     
+
     
     
     deinit {
         print("view controller is deinitialized")
-//        self.view.removeFromSuperview()
-//        if let constraints = constraints{
-//            NSLayoutConstraint.deactivate(constraints)
-//            self.constraints = nil
-//            self.imageView = nil
-//            self.nextButton = nil
-//        }
     }
 
 }
