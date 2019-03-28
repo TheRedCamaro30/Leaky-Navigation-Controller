@@ -2,8 +2,6 @@
 //  ViewController.swift
 //  NavigationControllerTesterProjectCollectionViews
 //
-//  Created by Thomas M. Jumper on 3/27/19.
-//  Copyright © 2019 Tile Technology LLC. All rights reserved.
 //
 
 import UIKit
